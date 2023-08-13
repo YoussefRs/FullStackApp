@@ -1,33 +1,32 @@
-const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
-// const fileUpload = require('express-fileupload');
-const errorMiddleware = require('./middleswares/error');
-const authRoute = require('./routes/authRoutes');
-
+require("dotenv").config({ path: "./config/config.env" });
+const path = require("path");
+const express = require("express");
 const app = express();
+const cloudinary = require("cloudinary").v2;
 
-//config
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config();
-}
+const connectDB = require("./config/DB");
+connectDB();
 
-app.use(express.json());
-app.use(cookieParser());
-app.use(bodyParser.urlencoded({ extended : true }));
-// app.use(fileUpload());
-
-app.use('/api/user', authRoute);
-
-
-
-
-app.get('/', (req, res) => {
-    res.send('Server is Running! 🚀');
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-//error middleware
-app.use(errorMiddleware);
+app.use(express.json());
+// app.use(express.static(path.join(__dirname, "./uploads/")));
+app.use("/api/auth", require("./routes/authRoutes"));
+app.use("/api/blogs", require("./routes/blogRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
+// app.use("*/uploads", express.static("uploads"));
 
-module.exports = app;
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
+
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => console.log(`Server is Running at Port: ${PORT}`));
