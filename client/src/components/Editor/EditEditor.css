@@ -1,0 +1,84 @@
+.edit-title {
+  display: block;
+  width: 100%;
+  margin: 2rem auto;
+  height: 3.8rem;
+  border: none;
+  border-bottom: 2px solid hsl(0, 0%, 80%);
+  outline: none;
+  background: hsl(0, 0%, 90%);
+  font-size: 2.8rem;
+  font-family: "Montserrat", "fira-mond";
+  transition: all 0.1s ease-in-out;
+  padding-left: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.edit-title:focus {
+  background: #fff;
+  border-color: hsl(207, 44%, 59%);
+}
+
+.cancel-btn {
+  position: absolute;
+  top: -1.6rem;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  border: 2px solid #333;
+  border-radius: 50%;
+  width: 3.2rem;
+  height: 3.2rem;
+  color: #fff;
+  background: hsl(0, 100%, 70%);
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.cancel-btn:hover {
+  background: hsl(0, 100%, 50%);
+}
+
+.update-btn {
+  display: block;
+  margin: 2rem auto 1rem auto;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: hsl(265, 70%, 85%);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.update-btn:hover {
+  color: #fff;
+  background: hsl(265, 70%, 50%);
+  transform: translateY(-0.4rem);
+}
+
+@media (max-width: 900px) {
+  .edit-title {
+    font-size: 2.7rem;
+    margin: 2rem auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .edit-title {
+    font-size: 2.6rem;
+  }
+  .update-btn {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .edit-title {
+    font-size: 2.5rem;
+  }
+}

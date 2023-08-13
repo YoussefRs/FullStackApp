@@ -1,0 +1,61 @@
+#main-footer {
+  margin-top: auto;
+  background: #333;
+  color: #fff;
+  padding: 0.6rem 0;
+  z-index: 3;
+}
+
+a {
+  color: #fff;
+}
+
+#main-footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#main-footer .footer-content .social .fab {
+  font-size: 20px;
+  margin-right: 1rem;
+  border: 2px #fff solid;
+  border-radius: 50%;
+  width: 40px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+#main-footer .footer-content .social .fa-github:hover {
+  background: #fff;
+  color: #333;
+  border-color: steelblue;
+}
+
+#main-footer .footer-content .social .fa-linkedin:hover {
+  background: #fff;
+  color: #0072b1;
+  border-color: steelblue;
+}
+
+@media (max-width: 768px) {
+  #main-footer .footer-content {
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .footer-copyright {
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-copyright {
+    font-size: 14px;
+    margin: 0.5rem 0;
+  }
+  #main-footer .footer-content .social .fab {
+    transform: scale(0.8);
+  }
+}

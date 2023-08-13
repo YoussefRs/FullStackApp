@@ -1,0 +1,158 @@
+.view-blog {
+  width: 55%;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.blogTitle {
+  font-size: 3rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
+  margin-bottom: 1rem;
+}
+
+.view-blog img {
+  width: 100%;
+  height: 40%;
+  border-radius: 10px;
+}
+
+.owner {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.owner-icon {
+  font-size: 2.4rem;
+  margin-right: 1rem;
+}
+
+.owner-name {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background: hsl(160, 70%, 37%);
+  color: hsl(0, 0%, 100%);
+  padding: 0.3rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.left-icon {
+  margin-left: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.owner-name:hover .left-icon {
+  margin-left: 30px;
+}
+
+.view-blog .editor {
+  font-size: 21px;
+  font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+  line-height: 1.8;
+}
+
+.view-blog .buttons .btn {
+  padding: 0.8rem 1.5rem;
+  margin: 2rem 1.5rem 0 0;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.view-blog .buttons .btn:hover {
+  color: #fff;
+  transform: translateY(-0.25rem);
+}
+
+.view-blog .buttons .edit-btn {
+  background: hsl(120, 100%, 85%);
+}
+
+.view-blog .buttons .edit-btn:hover {
+  background: hsl(120, 100%, 30%);
+}
+
+.view-blog .buttons .delete-btn {
+  background: hsl(0, 100%, 85%);
+}
+
+.view-blog .buttons .delete-btn:hover {
+  background: hsl(0, 100%, 50%);
+}
+
+@media (max-width: 900px) {
+  .view-blog {
+    width: 80vw;
+    padding: 0.8rem;
+  }
+  .blogTitle {
+    font-size: 2rem;
+  }
+  .view-blog .editor {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  .owner-icon {
+    font-size: 2rem;
+    margin-right: 0.7rem;
+  }
+  .owner-name {
+    font-size: 1rem;
+    padding: 0.3rem 0.7rem;
+  }
+  .left-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .view-blog {
+    width: 96vw;
+    margin-top: 1rem;
+  }
+  .blogTitle {
+    font-size: 1.6rem;
+  }
+  .view-blog .editor {
+    font-size: 19px;
+  }
+  .owner-icon {
+    font-size: 1.8rem;
+    margin-right: 0.6rem;
+  }
+  .owner-name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .view-blog {
+    width: 98vw;
+  }
+  .blogTitle {
+    font-size: 1.7rem;
+  }
+  .view-blog .editor {
+    font-size: 18px;
+  }
+  .owner-icon {
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+  }
+  .owner-name {
+    font-size: 1rem;
+  }
+  .buttons {
+    text-align: center;
+  }
+  .view-blog .buttons .btn {
+    margin-right: 0rem;
+    transform: scale(0.9);
+  }
+}
