@@ -1,7 +1,6 @@
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import setAuthToken from "./utils/setAuthToken";
@@ -53,7 +52,6 @@ function App() {
         />
       </Switch>
       <ScrollArrow />
-      <Footer />
     </div>
   );
 }

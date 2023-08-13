@@ -24,7 +24,7 @@ const Navbar = () => {
             border: "none",
           }}
         >
-          <FontAwesomeIcon className="plus-icon" icon={faPlusSquare} />
+          <FontAwesomeIcon className="plus-icon" icon={faPlusSquare} /> 
         </Link>
       </li>
       <li className="temp-style">Hello {user && user.name}</li>
@@ -57,6 +57,7 @@ const Navbar = () => {
               fontSize: "2.2rem",
               textDecoration: "none",
               fontFamily: '"Fira Mono"',
+              color: "white",
             }}
             className="logo"
           >
